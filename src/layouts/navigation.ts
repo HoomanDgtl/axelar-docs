@@ -265,10 +265,6 @@ export const getNavigation = (section) => {
               href: "/dev/amplifier/introduction/",
             },
             {
-              title: "Roadmap",
-              href: "/dev/amplifier/roadmap/",
-            },
-            {
               title: "Integration Overview",
               href: "/dev/amplifier/chain-integration/introduction/",
             },
@@ -282,7 +278,16 @@ export const getNavigation = (section) => {
             },
             {
               title: "Relay Messages",
-              href: "/dev/amplifier/chain-integration/relay-messages/",
+              children: [
+                {
+                  title: "Automatic Relaying",
+                  href: "/dev/amplifier/chain-integration/relay-messages/automatic/",
+                },
+                {
+                  title: "Manual Relaying",
+                  href: "/dev/amplifier/chain-integration/relay-messages/manual/",
+                },
+              ],
             },
             {
               title: "Add Rewards",
@@ -297,13 +302,8 @@ export const getNavigation = (section) => {
               href: "/dev/amplifier/chain-integration/error-messages/",
             },
             {
-              title: "Chain RPC Setup",
-              children: [
-                {
-                  title: "Configure companion processes",
-                  href: "/dev/amplifier/chains/soroban",
-                },
-              ],
+              title: "Roadmap",
+              href: "/dev/amplifier/roadmap/",
             },
           ],
         },
@@ -426,6 +426,10 @@ export const getNavigation = (section) => {
             { title: "Optimism", href: "/validator/external-chains/optimism/" },
             { title: "Polygon", href: "/validator/external-chains/polygon/" },
             { title: "Scroll", href: "/validator/external-chains/scroll/" },
+            {
+              title: "Soroban",
+              href: "/validator/external-chains/soroban/",
+            },
             { title: "Sui", href: "/validator/external-chains/sui/" },
           ],
         },
@@ -525,12 +529,7 @@ export const getNavigation = (section) => {
       },
       {
         title: "Static Configs",
-        children: [
-          {
-            title: "Static Configs",
-            href: "/resources/static-configs/static-configs/",
-          },
-        ],
+        href: "/resources/static-configs/static-configs/",
       },
       {
         title: "Tokens",
@@ -711,13 +710,8 @@ export const getNavigation = (section) => {
         ],
       },
       {
-        title: "Community",
-        children: [
-          {
-            title: "Community Pool Proposals",
-            href: " /resources/community/community-pool-proposals/",
-          },
-        ],
+        title: "Community Pool Proposals",
+        href: " /resources/community/community-pool-proposals/",
       },
       {
         title: "Onboard Your IBC chain",
